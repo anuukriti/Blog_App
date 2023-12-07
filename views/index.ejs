@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="main-body">
+            <h1 id="title">Create your Blog</h1>
+
+            <a class="nav-link" href="/createBlog">
+                <button class="create-button">Create</button>
+            </a>
+        </div>
+        <div class="content-body">
+            <h2>--------Past Blog Content--------</h2>
+            <p><em>Scroll down to view </em></p>
+            <br /><br />
+
+            <div id="bloglist">
+                <ol>
+                    <% if(locals.newitems){ %> <% for(i = newitems.length-1; i
+                    >= 0; i--){ %>
+                    <div class="box1">
+                        <li class="blog-list-items">
+                            <%= newitems[i].title %> by <%= newitems[i].name %>
+                        </li>
+                        <form id="open-btn-form" action="/open" method="post">
+                            <input
+                                type="hidden"
+                                name="index"
+                                value="<%= newitems[i].id %>"
+                            />
+                            <button type="submit" class="open-btn">Open</button>
+                        </form>
+                        <form
+                            id="delete-btn-form"
+                            action="/delete"
+                            method="post"
+                        >
+                            <input
+                                type="hidden"
+                                name="index"
+                                value="<%= newitems[i].id %>"
+                            />
+                            <button type="submit" class="delete-btn">X</button>
+                        </form>
+                    </div>
+                    <% } %> <% } %>
+                </ol>
+            </div>
+        </div>
+    </body>
+</html>

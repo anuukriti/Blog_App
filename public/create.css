@@ -1,0 +1,35 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: black;
+    color: white;
+}
+
+.container {
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+textarea {
+    height: 200px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #2196f3;
+    color: white;
+    border: none;
+    cursor: pointer;
+}

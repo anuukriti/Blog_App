@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: black;
+    color: white;
+}
+
+.Blog-title{
+    text-align: center;
+    color: blueviolet;
+    font-size: 50px;
+}
+.Blog-content{
+    text-align: justify;
+    color:aliceblue;
+    font-size: 20px;
+}
+#main-body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.author-name{
+    color: aliceblue;
+}
